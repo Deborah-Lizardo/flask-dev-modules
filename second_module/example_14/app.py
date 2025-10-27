@@ -16,6 +16,8 @@ def index():
 def home():
     return render_template("home.html")
 
+#aktuator
+
 @app.route('/actuator')
 def actuator():
     return render_template("actuators.html", actuators=actuators)
@@ -23,14 +25,6 @@ def actuator():
 @app.route('/register_actuator')
 def register_actuator():
     return render_template("register_actuators.html")
-
-@app.route('/sensor')
-def sensor():
-    return render_template("sensors.html", sensors=actuators)
-
-@app.route('/register_sensor')
-def register_sensor():
-    return render_template("register_sensor.html")
 
 @app.route('/add_actuator', methods=['GET', 'POST'])
 def add_actuator():
@@ -50,9 +44,18 @@ def add_actuator():
 def list_actuators():
     return render_template("actuators.html", actuators=actuators)
 
+@app.route('/sensor')
+def sensor():
+    return render_template("sensors.html", sensors=actuators)
+
+@app.route('/register_sensor')
+def register_sensor():
+    return render_template("register_sensor.html")
+
+
 @app.route('/add_sensor', methods=['GET', 'POST'])
 def add_sensor():
-    global actuators
+    global sensors
     if request.method == 'POST':
         sensor_name = request.form['sensor']
         sensor_value = request.form['value']

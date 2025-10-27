@@ -23,7 +23,7 @@ def validated_user():
 @login.route('/list_users')
 def list_users():
     global users
-    return render_template("users.html", devices=users)
+    return render_template("list_users.html", devices=users)
 
 @login.route('/register_user')
 def register_user():

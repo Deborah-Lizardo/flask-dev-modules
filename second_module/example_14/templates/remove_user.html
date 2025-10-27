@@ -5,7 +5,7 @@
 {% extends"base.html" %}
 {% block content%}
   <body>
-    <form action="http://localhost:8080/del_user" method="post">
+    <form action="http://localhost:8000/del_user" method="post">
       <select name="user" class="Input">
         {% for key, value in devices.items() %}
           <option>{{ key }}</option>
