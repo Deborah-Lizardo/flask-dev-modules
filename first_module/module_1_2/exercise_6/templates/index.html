@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mein Haus</title>
+</head>
+<body>
+<h2>Mein Haus</h2>
+<h3>Menü Zugriff:</h3>
+<ul>
+{% for raum, url in raeume.items() %}
+    <li><a href="{{ url }}">{{ raum }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>

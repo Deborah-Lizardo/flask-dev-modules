@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mein Haus - Sensoren</title>
+</head>
+<body>
+    <h1>Sensoren</h1>
+    <ul>
+        {% for key, value in sensoren.items() %}
+            <li>{{ key }} : {{ value }}</li>
+            {% if value < 20 %}
+                <li>Niedrige Temperatur</li>
+            {% elif value >= 20 and value < 25 %}
+                <li>Normale Temperatur</li>
+            {% else %}
+                <li>Hohe Temperatur</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <p>Zurück zur <a href="/">Startseite</a></p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "devices.html" %}
+
+{% block content %}
+<h2>Aktuatoren</h2>
+<ul>
+    {% for aktuator in aktuatoren %}
+        <li>{{ aktuator }}</li>
+    {% endfor %}
+</ul>
+<p><a href="/devices">Zurück zu Geräte</a></p>
+{% endblock %}

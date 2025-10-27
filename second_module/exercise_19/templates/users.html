@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <h1>Users</h1>
+    <ul>
+        {% for user, password in devices.items() %}
+            <li>{{ user }}: {{ password }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/register_user">Register New User</a></p>
+    <p><a href="/">Back to Home</a></p>
+</html>
+{% endblock %}

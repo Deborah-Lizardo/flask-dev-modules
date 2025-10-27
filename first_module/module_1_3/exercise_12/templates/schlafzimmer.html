@@ -1,0 +1,21 @@
+{% extends "room.html" %}
+
+{% block content %}
+<h2>Schlafzimmer</h2>
+
+<h3>Sensoren</h3>
+<ul>
+    {% for sensor in sensoren %}
+        <li>{{ sensor }}</li>
+    {% endfor %}
+</ul>
+
+<h3>Aktuatoren</h3>
+<ul>
+    {% for aktuator in aktuatoren %}
+        <li>{{ aktuator }}</li>
+    {% endfor %}
+</ul>
+
+<p><a href="/room">Zurück zu Räume</a></p>
+{% endblock %}

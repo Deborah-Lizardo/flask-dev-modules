@@ -1,0 +1,25 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Badezimmer</title>
+</head>
+<body>
+    <h1>Badezimmer</h1>
+
+    <h2>Sensoren</h2>
+    <ul>
+        {% for key, value in sensoren.items() %}
+            <li>{{ key }} : {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Aktuatoren</h2>
+    <ul>
+        {% for key, value in aktuatoren.items() %}
+            <li>{{ key }} : {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <p><a href="/">Zurück zur Startseite</a></p>
+</body>
+</html>

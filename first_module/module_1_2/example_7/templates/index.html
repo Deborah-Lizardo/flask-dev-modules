@@ -1,0 +1,14 @@
+<html lang="de">
+<head>
+<title>Mein Haus</title>
+</head>
+<body>
+<h2>Mein Haus</h2>
+<h3>Menuzugang:</h3>
+<ul>
+{% for raeum, url in raeume.items() %}
+    <li><a href="{{ url }}">{{ raeum }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>

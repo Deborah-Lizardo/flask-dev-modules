@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <form action="http://localhost:8000/remove_sensor" method="post">
+      <select name="name" class="Input">
+        {%for key, value in sensors.items()%}
+          <option>{{ key }}</option>
+        {%endfor%}
+      </select>
+      <p><input type="submit" value="Delete" /></p>
+    </form>
+    <p><a href="/home">Back to Home</a></p>
+  </body>
+</html>

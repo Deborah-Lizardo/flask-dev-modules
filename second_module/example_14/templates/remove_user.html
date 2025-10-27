@@ -1,0 +1,18 @@
+<html lang="pt">
+<link rel="stylesheet" href="static/css/style.css" />
+<link rel="stylesheet" href="static/css/login.css" />
+<link rel="stylesheet" href="static/css/admin.css" />
+{% extends"base.html" %}
+{% block content%}
+  <body>
+    <form action="http://localhost:8080/del_user" method="post">
+      <select name="user" class="Input">
+        {% for key, value in devices.items() %}
+          <option>{{ key }}</option>
+        {% endfor %}
+      </select>
+      <p><input type="submit" value="Deletar" /></p>
+    </form>
+  </body>
+{% endblock%}
+</html>

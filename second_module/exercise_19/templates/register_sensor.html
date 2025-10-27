@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<link rel="stylesheet" href="static/css/style.css" />
+<link rel="stylesheet" href="static/css/login.css" />
+<link rel="stylesheet" href="static/css/admin.css" />
+  <body>
+    <form action="http://localhost:8000/register_sensor" method="post">
+      <p>Sensor Name:</p>
+      <p><input type="text" name="name" placeholder="Sensor Name" required /></p>
+      <p>Initial Value:</p>
+      <p><input type="number" name="value" placeholder="Value" required /></p>
+      <p><input type="submit" value="Register Sensor" /></p>
+    </form>
+    <p><a href="/home">Back to Home</a></p>
+  </body>
+</html>

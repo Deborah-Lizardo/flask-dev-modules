@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Mein Haus</title>
+</head>
+<body>
+  <h1>Actuators</h1>
+    {%extends"base.html" %}
+    {%block content%}
+    <ul>
+      {% for key, value in actuators.items() %}
+      <li>{{ key }} : {{ value }}</li>
+      {% endfor %}
+    </ul>
+    {%endblock%}
+  <p>Go back to<a href="/home">initial page</a></p>
+</body>
+</html>

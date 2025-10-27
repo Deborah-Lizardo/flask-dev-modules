@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="static/css/style.css" />
+<link rel="stylesheet" href="static/css/login.css" />
+<link rel="stylesheet" href="static/css/admin.css" />
+<head>
+    <meta charset="UTF-8">
+{%extends"base.html"%}
+    {%block content%}
+  <title>Mein Haus</title>
+</head>
+<body>
+  <h1>Actuators</h1>
+    <ul>
+      {% for key, value in actuators.items() %}
+      <li>{{ key }} : {{ value }}</li>
+      {% endfor%}
+    </ul>
+    {%endblock%}
+  <p>Go back to<a href="/">initial page</a></p>
+{% block content %} {% endblock %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mein Haus</title>
+  </head>
+  <body>
+    <h1>Sensors</h1>
+    {%extends "base.html" %}
+    {%block content%}
+
+  <ul>
+    {% for key, value in sensors.items() %}
+    <li>{{key}}:
+    {% if value > 20 %}
+      Sensor is ON (1)
+    {% else %}
+      Sensor is OFF (0)
+    {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+    {%endblock%}
+  <p>Go back to <a href="/">initial page</a>
+  </body>
+</html>

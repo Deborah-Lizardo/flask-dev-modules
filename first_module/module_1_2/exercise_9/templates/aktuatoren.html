@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktuatoren</title>
+</head>
+<body>
+<h2>Aktuatoren</h2>
+<ul>
+{% for key, value in aktuatoren.items() %}
+    <li>{{ key }}: 
+        {% if value == 1 %}
+            eingeschaltet
+        {% elif value == 0 %}
+            ausgeschaltet
+        {% else %}
+            {{ value }}
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+<p><a href="/">Zurück zur Startseite</a></p>
+</body>
+</html>

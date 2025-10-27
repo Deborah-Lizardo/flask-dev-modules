@@ -1,0 +1,11 @@
+{% extends "devices.html" %}
+
+{% block content %}
+<h2>Sensoren</h2>
+<ul>
+    {% for sensor in sensoren %}
+        <li>{{ sensor }}</li>
+    {% endfor %}
+</ul>
+<p><a href="/devices">Zurück zu Geräte</a></p>
+{% endblock %}
