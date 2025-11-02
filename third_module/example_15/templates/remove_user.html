@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <form action="http://localhost:8000/del_user" method="post">
+      <select name="user" class="Input">
+        {% for key, value in users.items() %}
+          <option>{{ key }}</option>
+        {% endfor %}
+      </select>
+      <p><input type="submit" value="Deletar" /></p>
+    </form>
+    <p>Go back to<a href="/home">initial page</a></p>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Users</h1>
+    <ul>
+        {% for user, password in users.items() %}
+            <li>{{ user }}: {{ password }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/home">Back to Home</a></p>
+{% endblock %}
